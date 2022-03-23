@@ -2,14 +2,14 @@
 name: Publish And Deploy Demo
 
 on:
-  # 当提交 master 分支的代码的时候触发 action
+  # 当提交 main 分支的代码的时候触发 action
   push:
     branches:
-      - master
-  # 或对 master 分支进行 pull request 的时候
+      - main
+  # 或对 main 分支进行 pull request 的时候
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy:
@@ -18,7 +18,7 @@ jobs:
     steps:
       # 下载仓库源码
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@main
 
       # 安装依赖 & 运行测试并生成覆盖率报告 & 项目打包
       - name: Install and Build
