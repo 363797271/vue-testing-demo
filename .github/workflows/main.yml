@@ -7,9 +7,9 @@ on:
     branches:
       - master
   # 或对 master 分支进行 pull request 的时候
-	pull_request:
-  	branches:
-    	- master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-			# 安装依赖 & 运行测试并生成覆盖率报告 & 项目打包
+      # 安装依赖 & 运行测试并生成覆盖率报告 & 项目打包
       - name: Install and Build
         run: |
           npm install
@@ -34,7 +34,7 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
 
-			# 上传测试覆盖率报告到 codecov
+      # 上传测试覆盖率报告到 codecov
       - name: codecov
         # 使用 codecov 官方提供的 action
         uses: codecov/codecov-action@v1
