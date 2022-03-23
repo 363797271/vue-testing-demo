@@ -1,5 +1,7 @@
 # vue-testing-demo
 
+[![codecov](https://codecov.io/gh/363797271/vue-testing-demo/branch/main/graph/badge.svg?token=3S6IBEGRLX)](https://codecov.io/gh/363797271/vue-testing-demo)
+
 ## Project setup
 ```
 npm install
